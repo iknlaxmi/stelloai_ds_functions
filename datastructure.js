@@ -1,3 +1,4 @@
+//Javascript class to represent employee structure
 class Employee {
   constructor(name, role, salary) {
     this.name = name;

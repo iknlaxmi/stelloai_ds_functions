@@ -1,4 +1,11 @@
 import Employee from "./datastructure.js";
+/*Description:finds the employee in an organizational hierarchy 
+who has the highest number of direct reports.
+-dfs(depth-first search) is a helper function defined with in 'findMaxNumberOfDirectReports'
+that performs recursive traversal of the organization tree.
+- After the recursive traversal is complete it returns 'maxEmployee',which is the employee with the highest 
+number of direct reports found during the traversal.
+*/
 export function findMaxNumberOfDirectReports(employee) {
   let maxReports = 0;
   let maxEmployee = null;
@@ -16,6 +23,10 @@ export function findMaxNumberOfDirectReports(employee) {
   return maxEmployee;
 }
 
+/**
+ *
+ * Description: To find the lowest common manager of two given employees in an organizational hierarchy.
+ */
 export function findCommonManager(ceo, employee1, employee2) {
   function dfs(current) {
     if (!current || current === employee1 || current === employee2) {
